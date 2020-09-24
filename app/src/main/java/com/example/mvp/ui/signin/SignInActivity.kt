@@ -1,31 +1,31 @@
 package com.example.mvp.ui.signin
 
 import android.content.Intent
-import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 
 import com.example.mvp.R
 import com.example.mvp.data.model.user
+import com.example.mvp.ui.base.BaseActivity
 import com.example.mvp.ui.main.MainActivity
 import com.example.mvp.ui.signup.SignUpActivity
 
-public class  SignInActivity: AppCompatActivity(), SignInContract.View, View.OnClickListener{
+public class  SignInActivity: BaseActivity(), SignInContract.View, View.OnClickListener {
 
-    private  var user: user? = null
-    private var mTextUserName : TextView? = null
-    private var mTextPassword : TextView? = null
+    private var mTextUserName : EditText? = null
+    private var mTextPassword : EditText? = null
     private  var mButtonSignIn : Button? = null
     private var mTextSignIn : TextView? = null
     private var mSignInPresenter : SignInPresenter? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activiity_signin)
+    override fun getLayoutResID(): Int {
+        return R.layout.activiity_signin
+    }
 
+    override fun init() {
         initView()
         registerListener()
         initPresenter()
@@ -36,6 +36,7 @@ public class  SignInActivity: AppCompatActivity(), SignInContract.View, View.OnC
         mTextPassword = findViewById(R.id.edtPassword)
         mButtonSignIn = findViewById(R.id.btnLogin)
         mTextSignIn = findViewById(R.id.tvSignup)
+
     }
 
     private fun registerListener() {
@@ -64,8 +65,7 @@ public class  SignInActivity: AppCompatActivity(), SignInContract.View, View.OnC
             Toast.makeText(this, "User or Password is empty !!!",Toast.LENGTH_SHORT).show()
             return
         }
-        user = user(userName,passWord)
-        mSignInPresenter?.handleSignIn(this.user!!)
+        mSignInPresenter?.handleSignIn(userName, passWord)
 
     }
 

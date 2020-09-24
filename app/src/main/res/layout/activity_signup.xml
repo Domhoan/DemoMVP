@@ -10,52 +10,50 @@
         android:id="@+id/imageView2"
         android:layout_width="170dp"
         android:layout_height="119dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="40dp"
         android:src="@drawable/ic_people_signup"
         app:layout_constraintBottom_toTopOf="@+id/edtSignUpName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.152" />
+        app:layout_constraintVertical_bias="0.969" />
 
     <EditText
         android:id="@+id/edtSignUpName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="40dp"
         android:ems="10"
         android:hint="User Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/edtSignUpPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/edtSignUpPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="40dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/edtSignUpRePass"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/edtSignUpRePass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="36dp"
         android:ems="10"
         android:hint="Retype Password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -73,11 +71,10 @@
         android:id="@+id/tvSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
+        android:layout_marginBottom="56dp"
         android:text="Have account, sign in now !!!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

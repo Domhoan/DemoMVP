@@ -10,6 +10,6 @@ public interface SignInContract {
     }
 
     interface Presenter {
-        fun handleSignIn(user: user)
+        fun handleSignIn(userName: String , passWord: String)
     }
 }
