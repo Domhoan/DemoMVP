@@ -11,7 +11,7 @@
         android:id="@+id/tvHello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="@dimen/margin_tvHello"
         android:text="@string/login_textview_title"
         android:textSize="@dimen/text_size_textview"
         app:layout_constraintBottom_toTopOf="@+id/tvContent"
@@ -44,20 +44,21 @@
         android:text="@string/thanks_for_sign_in"
         android:textColor="@color/colorAccent"
         android:textSize="@dimen/text_size_content"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/imageChild"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="252dp"
-        android:layout_height="234dp"
+        android:id="@+id/imageChild"
+        android:layout_width="@dimen/width_img_child"
+        android:layout_height="@dimen/height_img_child"
         android:layout_marginBottom="@dimen/margin_bottom_img_child"
         android:src="@drawable/ic_child"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="TODO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

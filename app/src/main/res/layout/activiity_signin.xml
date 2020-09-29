@@ -8,15 +8,16 @@
 
     <ImageView
         android:id="@+id/imgIconUser"
-        android:layout_width="88dp"
-        android:layout_height="76dp"
+        android:layout_width="@dimen/width_icon_user"
+        android:layout_height="@dimen/height_icon_user"
         app:layout_constraintBottom_toTopOf="@+id/edtUserName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.684"
-        android:src="@drawable/ic_user" />
+        android:src="@drawable/ic_user"
+        android:contentDescription="TODO" />
 
     <EditText
         android:id="@+id/edtUserName"

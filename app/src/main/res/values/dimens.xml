@@ -10,4 +10,18 @@
     <dimen name="margin_button_tv_content">68dp</dimen>
     <dimen name="margin_top_hello">128dp</dimen>
     <dimen name="margin_start_hello">8dp</dimen>
+    <dimen name="width_icon_user">88dp</dimen>
+    <dimen name="height_icon_user">76dp</dimen>
+    <dimen name="margin_tvHello">128dp</dimen>
+    <dimen name="width_img_child">252dp</dimen>
+    <dimen name="height_img_child">234dp</dimen>
+    <dimen name="width_ic_signup">170dp</dimen>
+    <dimen name="height_ic_signup">119dp</dimen>
+    <dimen name="margin_top_ic_sign_up">16dp</dimen>
+    <dimen name="margin_bot_ic_sign_up">40dp</dimen>
+    <dimen name="margin_bot_sign_up_name">40dp</dimen>
+    <dimen name="margin_bot_sign_up_pass">40dp</dimen>
+    <dimen name="margin_bot_sign_up_repass">36dp</dimen>
+    <dimen name="margin_bot_button_sign_up">28dp</dimen>
+    <dimen name="margin_bot_text_no_acount">56dp</dimen>
 </resources>
