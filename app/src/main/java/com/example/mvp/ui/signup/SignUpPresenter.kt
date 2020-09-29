@@ -1,24 +1,29 @@
 package com.example.mvp.ui.signup
-import com.example.mvp.data.model.user
 
-class SignUpPresenter : SignUpContract.Presenter {
+import android.content.Context
+import com.example.mvp.data.model.User
+import com.example.mvp.data.source.local.UserDatabaseLocal
 
-    private var mView : SignUpContract.View? = null
-    val listUser = mutableListOf<user>()
+class SignUpPresenter(context: Context) : SignUpContract.Presenter {
 
-    fun setView(view: SignUpContract.View){
+    private var mView: SignUpContract.View? = null
+    private var dbLocal = UserDatabaseLocal(context)
+
+    fun setView(view: SignUpContract.View) {
         mView = view
     }
 
 
     override fun handleSignUp(userName: String, passWord: String) {
-        if(userName != " " && passWord != " "){
-            val userA = user(userName,passWord)
-            listUser.add(userA)
-            mView?.signUpSuccess(userA)
+        val success = "Sign up success"
+        val fail = "User or Password is not invalid"
+        if (!dbLocal.checkUser(userName)) {
+            val user = User(userName = userName, passWord = passWord )
+            dbLocal.addUser(user)
+            mView?.signUpSuccess(success)
             return
         }
-        mView?.signUpFailure("User or Password is not invalid")
+        mView?.signUpFailure(fail)
     }
 
 

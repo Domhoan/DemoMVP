@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_bottom_text">184dp</dimen>
+    <dimen name="margin_bottom_button_login">28dp</dimen>
+    <dimen name="margin_bottom_edit_password">80dp</dimen>
+    <dimen name="margin_bottom_edit_username">56dp</dimen>
+    <dimen name="text_size_textview">20sp</dimen>
+    <dimen name="text_size_content">25sp</dimen>
+    <dimen name="margin_bottom_img_child">196dp</dimen>
+    <dimen name="margin_button_tv_content">68dp</dimen>
+    <dimen name="margin_top_hello">128dp</dimen>
+    <dimen name="margin_start_hello">8dp</dimen>
+</resources>

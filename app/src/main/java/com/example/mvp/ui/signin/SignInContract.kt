@@ -1,15 +1,14 @@
 package com.example.mvp.ui.signin
 
-import com.example.mvp.data.model.user
 
-public interface SignInContract {
-    interface View{
-        fun signInSuccess(user: user)
+interface SignInContract {
+    interface View {
+        fun signInSuccess(userName: String, passWord: String)
 
         fun signInFailure(error: String)
     }
 
     interface Presenter {
-        fun handleSignIn(userName: String , passWord: String)
+        fun handleSignIn(userName: String, passWord: String)
     }
 }

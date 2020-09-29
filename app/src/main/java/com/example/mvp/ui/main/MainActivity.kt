@@ -12,8 +12,11 @@ class MainActivity : AppCompatActivity() {
         show()
     }
 
-    fun show(){
-        val userName = intent.extras?.getString("userName","I don't have a name")
+    fun show() {
+        val key = "userName"
+        val defaultValue = "I don't have a name"
+        val userName = intent.extras?.getString(key, defaultValue)
         tvHelloName.text = userName
     }
+    
 }
