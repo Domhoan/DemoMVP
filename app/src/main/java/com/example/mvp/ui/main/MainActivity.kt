@@ -13,10 +13,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun show() {
-        val key = "userName"
-        val defaultValue = "I don't have a name"
-        val userName = intent.extras?.getString(key, defaultValue)
+        val userName = intent.extras?.getString(KEY, DEFAULT_VALUE)
         tvHelloName.text = userName
+    }
+    companion object{
+        const val KEY = "userName"
+        const val DEFAULT_VALUE = "No name"
     }
 
 }

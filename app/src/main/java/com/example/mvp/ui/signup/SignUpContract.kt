@@ -9,6 +9,6 @@ interface SignUpContract {
     }
 
     interface Presenter {
-        fun handleSignUp(userName: String, passWord: String)
+        fun handleSignUp(userName: String, passWord: String, rePass : String)
     }
 }

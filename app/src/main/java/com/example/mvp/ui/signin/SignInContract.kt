@@ -3,7 +3,7 @@ package com.example.mvp.ui.signin
 
 interface SignInContract {
     interface View {
-        fun signInSuccess(userName: String, passWord: String)
+        fun signInSuccess(userName: String)
 
         fun signInFailure(error: String)
     }

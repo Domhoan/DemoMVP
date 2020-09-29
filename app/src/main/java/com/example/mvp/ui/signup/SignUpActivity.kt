@@ -3,7 +3,8 @@ package com.example.mvp.ui.signup
 import android.content.Intent
 import android.view.View
 import com.example.mvp.R
-import com.example.mvp.data.source.local.UserDatabaseLocal
+import com.example.mvp.data.source.local.AppDatabase
+import com.example.mvp.data.source.local.dao.UserDaoImpl
 import com.example.mvp.ui.base.BaseActivity
 import com.example.mvp.ui.signin.SignInActivity
 import com.example.mvp.utils.showToast
@@ -11,9 +12,9 @@ import kotlinx.android.synthetic.main.activity_signup.*
 
 class SignUpActivity : BaseActivity(), View.OnClickListener, SignUpContract.View {
 
-    private val activity = this@SignUpActivity
+    private var appDatabase : AppDatabase? = null
     private var mSignUpPresenter: SignUpPresenter? = null
-    private var dbLocal: UserDatabaseLocal? = null
+    private var userDaoImpl: UserDaoImpl? = null
 
     override fun getLayoutResID() = R.layout.activity_signup
 
@@ -24,9 +25,10 @@ class SignUpActivity : BaseActivity(), View.OnClickListener, SignUpContract.View
 
 
     private fun initPresenter() {
-        mSignUpPresenter = SignUpPresenter(activity)
+        appDatabase = AppDatabase.getInstance(this)
+        userDaoImpl = UserDaoImpl.getInstance(appDatabase!!)
+        mSignUpPresenter = SignUpPresenter(appDatabase!!)
         mSignUpPresenter?.setView(this)
-        dbLocal = UserDatabaseLocal(activity)
     }
 
     private fun registerListener() {
@@ -36,23 +38,19 @@ class SignUpActivity : BaseActivity(), View.OnClickListener, SignUpContract.View
 
     override fun onClick(view: View?) {
         when (view?.id) {
-            R.id.btnSignUp -> signup()
+            R.id.btnSignUp -> signUp()
             R.id.tvSignUp -> {
                 startActivity(Intent(this, SignInActivity::class.java))
             }
         }
     }
 
-    private fun signup() {
+    private fun signUp() {
         val userName = edtSignUpName.text.toString().trim()
         val passWord = edtSignUpPassword.text.toString().trim()
         val rePass = edtSignUpRePass.text.toString().trim()
-        if (userName.isEmpty() || passWord.isEmpty() || rePass.isEmpty() || passWord != rePass) {
-            val inCorrect = "User or Password is incorrect !!!"
-            this.showToast(inCorrect)
-            return
-        }
-        mSignUpPresenter?.handleSignUp(userName, passWord)
+
+        mSignUpPresenter?.handleSignUp(userName, passWord,rePass)
     }
 
     override fun signUpSuccess(success : String) {

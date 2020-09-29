@@ -1,12 +1,14 @@
 package com.example.mvp.ui.signin
 
-import android.content.Context
-import com.example.mvp.data.source.local.UserDatabaseLocal
 
-class SignInPresenter(context: Context) : SignInContract.Presenter {
+import com.example.mvp.data.source.local.AppDatabase
+import com.example.mvp.data.source.local.dao.UserDaoImpl
+
+
+class SignInPresenter(appDatabase: AppDatabase) : SignInContract.Presenter {
 
     private var view: SignInContract.View? = null
-    private var dbLocal=  UserDatabaseLocal(context)
+    private var dbLocal = UserDaoImpl(appDatabase)
 
 
     fun setView(v: SignInContract.View) {
@@ -14,10 +16,15 @@ class SignInPresenter(context: Context) : SignInContract.Presenter {
     }
 
     override fun handleSignIn(userName: String, passWord: String) {
-            if (dbLocal.checkUser(userName, passWord)) {
-                view?.signInSuccess(userName, passWord)
-                return
-            }
+        if (userName.isEmpty() && passWord.isEmpty()) {
+            val noData = "User or Password is empty !!!"
+            view?.signInFailure(noData)
+            return
+        }
+        if (dbLocal.checkUser(userName, passWord)) {
+            view?.signInSuccess(userName)
+            return
+        }
 
         view?.signInFailure("User Name or Password is invalid")
     }
