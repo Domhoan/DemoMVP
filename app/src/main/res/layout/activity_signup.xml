@@ -8,12 +8,12 @@
 
     <ImageView
         android:id="@+id/iconSignUp"
-        android:layout_width="@dimen/width_ic_signup"
-        android:layout_height="@dimen/height_ic_signup"
-        android:layout_marginTop="@dimen/margin_top_ic_sign_up"
-        android:layout_marginBottom="@dimen/margin_bot_ic_sign_up"
+        android:layout_width="@dimen/dp_170"
+        android:layout_height="@dimen/dp_119"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_40"
         android:src="@drawable/ic_people_signup"
-        app:layout_constraintBottom_toTopOf="@+id/edtSignUpName"
+        app:layout_constraintBottom_toTopOf="@+id/editSignUpName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,58 +21,58 @@
         app:layout_constraintVertical_bias="0.969" />
 
     <EditText
-        android:id="@+id/edtSignUpName"
+        android:id="@+id/editSignUpName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_bot_sign_up_name"
+        android:layout_marginBottom="@dimen/dp_40"
         android:ems="10"
         android:hint="@string/registration_user_name_hint"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/edtSignUpPassword"
+        app:layout_constraintBottom_toTopOf="@+id/editSignUpPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/edtSignUpPassword"
+        android:id="@+id/editSignUpPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_bot_sign_up_pass"
+        android:layout_marginBottom="@dimen/dp_40"
         android:ems="10"
         android:hint="@string/registration_password_hint"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/edtSignUpRePass"
+        app:layout_constraintBottom_toTopOf="@+id/editSignUpRePass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/edtSignUpRePass"
+        android:id="@+id/editSignUpRePass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_bot_sign_up_repass"
+        android:layout_marginBottom="@dimen/dp_36"
         android:ems="10"
-        android:hint="@string/repass"
+        android:hint="@string/text_repass"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSignUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnSignUp"
+        android:id="@+id/buttonSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_bot_button_sign_up"
-        android:text="@string/btn_SignUp"
-        app:layout_constraintBottom_toTopOf="@+id/tvSignUp"
+        android:layout_marginBottom="@dimen/dp_28"
+        android:text="@string/text_button_signUp"
+        app:layout_constraintBottom_toTopOf="@+id/textSignUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tvSignUp"
+        android:id="@+id/textSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_bot_text_no_acount"
-        android:text="@string/tvHaveAccout"
+        android:layout_marginBottom="@dimen/dp_56"
+        android:text="@string/text_have_account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

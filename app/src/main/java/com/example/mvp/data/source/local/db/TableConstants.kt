@@ -1,4 +1,4 @@
-package com.example.mvp.data.source.local
+package com.example.mvp.data.source.local.db
 
 
 object UserTable {

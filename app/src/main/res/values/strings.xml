@@ -1,14 +1,17 @@
 <resources>
     <string name="app_name">MVP</string>
-    <string name="repass">Retype Password</string>
-    <string name="btn_SignUp">Sign Up</string>
-    <string name="tvHaveAccout">Have account, sign in now !!!</string>
-    <string name="hintSignInUsername">User Name</string>
-    <string name="hintSignInPassword">Password</string>
-    <string name="login_title">Log in</string>
-    <string name="dont_have_account">Don\'t have account, sign up now !!!</string>
-    <string name="login_textview_title">Hello</string>
-    <string name="thanks_for_sign_in">Thanks for you sign in !!!</string>
+    <string name="text_repass">Retype Password</string>
+    <string name="text_button_signUp">Sign Up</string>
+    <string name="text_have_account">Have account, sign in now !!!</string>
+    <string name="sign_in_username_hint">User Name</string>
+    <string name="sign_in_password_hint">Password</string>
+    <string name="title_login">Log in</string>
+    <string name="text_don_have_account">Don\'t have account, sign up now !!!</string>
+    <string name="title_hello">Hello</string>
+    <string name="text_thanks_for_sign_in">Thanks for you sign in !!!</string>
     <string name="registration_user_name_hint">User Name</string>
     <string name="registration_password_hint">Password</string>
+    <string name="msg_no_data">User or Password is empty !!!</string>
+    <string name="msg_user_pass_invalid">User Name or Password is invalid</string>
+    <string name="text_no_name">No name</string>
 </resources>

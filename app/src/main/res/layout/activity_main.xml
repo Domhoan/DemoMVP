@@ -8,13 +8,13 @@
     tools:context=".ui.main.MainActivity">
 
     <TextView
-        android:id="@+id/tvHello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_tvHello"
-        android:text="@string/login_textview_title"
-        android:textSize="@dimen/text_size_textview"
-        app:layout_constraintBottom_toTopOf="@+id/tvContent"
+        android:id="@+id/textHello"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp128"
+        android:text="@string/title_hello"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toTopOf="@+id/textContent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,28 +22,28 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/tvHelloName"
+        android:id="@+id/textHelloName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_start_hello"
-        android:layout_marginTop="@dimen/margin_top_hello"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_128"
         android:text=""
-        android:textSize="@dimen/text_size_textview"
-        app:layout_constraintBottom_toTopOf="@+id/tvContent"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toTopOf="@+id/textContent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.021"
-        app:layout_constraintStart_toEndOf="@+id/tvHello"
+        app:layout_constraintStart_toEndOf="@+id/textHello"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/tvContent"
+        android:id="@+id/textContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_button_tv_content"
-        android:text="@string/thanks_for_sign_in"
+        android:layout_marginBottom="@dimen/dp_68"
+        android:text="@string/text_thanks_for_sign_in"
         android:textColor="@color/colorAccent"
-        android:textSize="@dimen/text_size_content"
+        android:textSize="@dimen/sp_25"
         app:layout_constraintBottom_toTopOf="@+id/imageChild"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.568"
@@ -51,14 +51,14 @@
 
     <ImageView
         android:id="@+id/imageChild"
-        android:layout_width="@dimen/width_img_child"
-        android:layout_height="@dimen/height_img_child"
-        android:layout_marginBottom="@dimen/margin_bottom_img_child"
+        android:layout_width="@dimen/dp_252"
+        android:layout_height="@dimen/dp_234"
+        android:layout_marginBottom="@dimen/dp_196"
+
         android:src="@drawable/ic_child"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="TODO" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

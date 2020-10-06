@@ -1,5 +1,7 @@
 package com.example.mvp.ui.main
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mvp.R
@@ -13,12 +15,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun show() {
-        val userName = intent.extras?.getString(KEY, DEFAULT_VALUE)
-        tvHelloName.text = userName
-    }
-    companion object{
-        const val KEY = "userName"
-        const val DEFAULT_VALUE = "No name"
+        val userName = intent.extras?.getString(EXTRA_USERNAME, DEFAULT_VALUE.toString())
+        textHelloName.text = userName
     }
 
+    companion object {
+        const val EXTRA_USERNAME = "userName"
+        const val DEFAULT_VALUE = R.string.text_no_name
+
+        fun getIntent(context: Context, userName: String): Intent =
+            Intent(context, MainActivity::class.java).apply {
+                putExtra(EXTRA_USERNAME, userName)
+            }
+    }
 }

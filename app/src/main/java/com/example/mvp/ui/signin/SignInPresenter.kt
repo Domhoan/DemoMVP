@@ -1,32 +1,25 @@
 package com.example.mvp.ui.signin
 
-
-import com.example.mvp.data.source.local.AppDatabase
-import com.example.mvp.data.source.local.dao.UserDaoImpl
-
-
-class SignInPresenter(appDatabase: AppDatabase) : SignInContract.Presenter {
-
-    private var view: SignInContract.View? = null
-    private var dbLocal = UserDaoImpl(appDatabase)
+import com.example.mvp.R
+import com.example.mvp.data.source.UserRepository
 
 
-    fun setView(v: SignInContract.View) {
-        view = v
-    }
+class SignInPresenter(
+    private val view: SignInContract.View,
+    private val repository: UserRepository
+) : SignInContract.Presenter {
+
 
     override fun handleSignIn(userName: String, passWord: String) {
         if (userName.isEmpty() && passWord.isEmpty()) {
-            val noData = "User or Password is empty !!!"
-            view?.signInFailure(noData)
+            view.showSignInFailure(R.string.msg_no_data)
             return
         }
-        if (dbLocal.checkUser(userName, passWord)) {
-            view?.signInSuccess(userName)
+        if (repository.isExistUser(userName, passWord)) {
+            view.showSignInSuccess(userName)
             return
         }
 
-        view?.signInFailure("User Name or Password is invalid")
+        view.showSignInFailure(R.string.msg_user_pass_invalid)
     }
-
 }

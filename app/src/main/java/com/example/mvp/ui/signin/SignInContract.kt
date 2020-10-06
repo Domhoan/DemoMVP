@@ -1,11 +1,10 @@
 package com.example.mvp.ui.signin
 
-
 interface SignInContract {
     interface View {
-        fun signInSuccess(userName: String)
+        fun showSignInSuccess(success: Any)
 
-        fun signInFailure(error: String)
+        fun showSignInFailure(error: Any)
     }
 
     interface Presenter {
